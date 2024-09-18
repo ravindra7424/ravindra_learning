@@ -1,0 +1,70 @@
+Task-5)Http
+ 
+Requests Types:
+
+GET: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+POST: Used to post data up to the web server.
+PUT: The PUT method replaces all current representations of the target resource with the request content.
+DELETE: Ask the server to delete the data.
+TRACE: Ask the server to return a diagnostic trace of the actions it takes.
+OPTIONS: Ask the server to return the list of request methods it supports.
+CONNECT: The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+Response Status Codes:
+ 
+1)1xx --->Informational 
+2)2xx --->Success responses
+3)3xx --->redirectional responses
+4)4xx --->Client Error responses
+5)5xx --->Server Error responses
+
+
+JSON (JavaScript Object Notation):
+----------------------------------
+JSON is a lightweight data interchange format that's easy for humans to read and write and easy for machines to parse and generate. It is commonly used in web APIs to exchange data between servers and clients.
+
+Structure:
+
+Objects: Enclosed in curly braces {}. They consist of key-value pairs.
+Arrays: Enclosed in square brackets []. They can contain multiple values.
+Values: Can be strings, numbers, booleans, null, objects, or arrays.
+ Example:{
+  "user": {
+    "id": 123,
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "isActive": true,
+    "roles": ["user", "admin"],
+    "address": {
+      "street": "123 Elm St",
+      "city": "Somewhere",
+      "zip": "12345"
+    }
+  }
+}
+
+XML (eXtensible Markup Language):
+----------------------------------
+XML is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable. XML uses a tree structure with elements enclosed in tags.
+
+Structure:
+
+Elements: Defined by tags. Elements can have attributes and nested elements.
+Attributes: Provide additional information about elements.
+Text: The content between the start and end tags.
+Examaple:
+<user>
+  <id>123</id>
+  <name>John Doe</name>
+  <email>johndoe@example.com</email>
+  <isActive>true</isActive>
+  <roles>
+    <role>user</role>
+    <role>admin</role>
+  </roles>
+  <address>
+    <street>123 Elm St</street>
+    <city>Somewhere</city>
+    <zip>12345</zip>
+  </address>
+</user>

@@ -1,0 +1,43 @@
+Task-4) Anonymous Classes
+  
+  Program-1)Anonymous Class Extending  A class
+-----------------------------------------------------
+     abstract class A{  
+  abstract void fun();  
+     }  
+class B{  
+ public static void main(String args[]){  
+  A a=new A(){  
+  void fun(){System.out.println("fun method ");}  
+  };  
+  a.fun();  
+ }  
+}  
+
+  Program-2)Anonymous Class Implementing A interface
+------------------------------------------------------
+interface A{  
+  public void fun();  
+}  
+class B{  
+ public static void main(String args[]){  
+  A a=new A(){  
+  public void fun(){System.out.println("fun method ");}  
+  };  
+  a.fun();  
+ }  
+}  
+
+  Program-3)Anonymous Class Implementing A interface with functional programming (-> token)
+-------------------------------------------------------------------------------------------
+
+interface A{  
+  public void fun();  
+}  
+class B{  
+ public static void main(String args[]){  
+  A a=()->{System.out.println("fun method "); 
+  };  
+  a.fun();  
+ }  
+}  

@@ -1,0 +1,26 @@
+Task 4 -----> Method Oerriding 
+  
+class A{
+     protected void add(int a,int b){
+         System.out.println("base class  function");
+         System.out.println(a+b);
+     }
+     
+    }
+ class B extends A
+{ 
+      protected void add(int a,int b)
+   {
+       
+         System.out.println("overriden function");
+         System.out.println(a+b);
+    }
+	public static void main(String[] args) {
+	    B b=new B();
+	    b.add(1,1);
+	   A a=new A();
+	   a.add(1,1);
+	   A a1=new B();
+	   a1.add(1,1);
+	}
+}

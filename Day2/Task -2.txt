@@ -1,0 +1,40 @@
+Task -2: Singleton Class
+
+There are two types of singleton design pattern
+ program-1:Early instantiation
+     public class Main
+   {   public static Main obj=new Main();
+    private Main(){}
+    public static Main getInstance(){
+        return obj;
+    }
+    private void fun(){
+        System.out.println("fun method");
+    }
+	public static void main(String[] args) {
+		Main m1=Main.getInstance();
+		m1.fun();
+		Main m2=Main.getInstance();
+		System.out.println(m1==m2);
+	}
+}
+
+Program-2:lazy instantiation
+public class Main
+{ public static  Main obj;
+    private Main(){}
+    public static Main getInstance(){
+       if(obj==null)
+          obj=new Main();
+        return obj;
+    }
+    private void fun(){
+        System.out.println("fun method");
+    }
+	public static void main(String[] args) {
+		Main m1=Main.getInstance();
+		m1.fun();
+		Main m2=Main.getInstance();
+		System.out.println(m1==m2);
+	}
+}

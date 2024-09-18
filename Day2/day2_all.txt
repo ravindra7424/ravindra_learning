@@ -1,0 +1,225 @@
+abstract class:
+   abstract calss vs intefaces
+1)--->
+abstract class A{
+    abstract void fun();
+}
+class B extends A{
+    void fun()
+    {
+        System.out.print("fun method implmented in Class B");
+    }
+     public static void main (String[] args) {
+        A a=new B();
+        a.fun();
+    }
+}
+2)--->
+abstract class A{
+    abstract void fun();
+    protected void add(int a,int b)
+    {
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void fun()
+    {
+        System.out.println("fun method implmented in Class B");
+    }
+     public static void main (String[] args) {
+        B a=new B();
+        a.fun();
+        a.add(2,3);
+    }
+}
+3)---->
+abstract class A{
+    int a=5;
+    abstract void fun();
+    protected void add(int a,int b)
+    {
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a=10;
+    void fun()
+    {
+        System.out.println("fun method implmented in Class B");
+    }
+     public static void main (String[] args) {
+        B b=new B();
+        b.fun();
+        b.add(2,3);
+        System.out.println("a="+b.a);
+        A a=new B();
+        a.fun();
+        a.add(4,5);
+        System.out.println("a="+a.a);
+
+    }
+}
+4)
+abstract class A{
+    int a;
+    A()
+    {
+        this.a=5;
+    }
+    A(int a){
+        this.a=a;
+    }
+    abstract void fun();
+    protected void add(int a,int b)
+    {
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a;
+    B(){
+        super(10);
+        this.a=10;
+    }
+    void fun()
+    {
+        System.out.println("fun method implmented in Class B");
+    }
+     public static void main (String[] args) {
+        B b=new B();
+        b.fun();
+        b.add(2,3);
+        System.out.println("a="+b.a);
+        A a=new B();
+        a.fun();
+        a.add(4,5);
+        System.out.println("a="+a.a);
+
+    }
+}
+--->>Singleton :  https://www.javatpoint.com/singleton-class-in-java
+Early Instantiation: creation of instance at load time.
+Lazy Instantiation: creation of instance when required.
+  1)----->
+   public class Main
+   {   public static Main obj=new Main();
+    private Main(){}
+    public static Main getInstance(){
+        return obj;
+    }
+    private void fun(){
+        System.out.println("fun method");
+    }
+	public static void main(String[] args) {
+		Main m1=Main.getInstance();
+		m1.fun();
+		Main m2=Main.getInstance();
+		System.out.println(m1==m2);
+	}
+}
+
+2)------>
+
+public class Main
+{ public static  Main obj;
+    private Main(){}
+    public static Main getInstance(){
+       if(obj==null)
+          obj=new Main();
+        return obj;
+    }
+    private void fun(){
+        System.out.println("fun method");
+    }
+	public static void main(String[] args) {
+		Main m1=Main.getInstance();
+		m1.fun();
+		Main m2=Main.getInstance();
+		System.out.println(m1==m2);
+	}
+}
+
+3)--->exception handling
+1)Exception handling using try catch block
+   class A {
+
+	public static void main(String[] args) {
+		try
+		{
+		int data=50/0; }
+		catch(ArithmeticException e)
+		{
+			System.out.println(e);
+		}
+		System.out.println("rest of the code");
+	}
+	
+}
+2)nested try block 
+    class A{
+
+	public static void main(String[] args) {
+		
+		   try{  
+			    int a[]=new int[5];  
+			   try{ a[5]=30/0;  }
+			     catch(ArithmeticException e)
+		          {
+				   System.out.println("Arithmetic Exception occurs");
+				  }  
+			    System.out.println(a[10]);
+			   }  
+			   catch(ArrayIndexOutOfBoundsException e)
+		          {
+				   System.out.println("ArrayIndexOutOfBounds Exception occurs");
+				  }  
+			   catch(Exception e)
+		          {
+				   System.out.println("Parent Exception occurs");
+				  }  		  
+			   System.out.println("rest of the code");  
+	}
+}
+3)finally block
+    class A{
+
+	public static void main(String[] args) {
+		
+			    int a[]=new int[5];  
+			   try{ a[5]=30/0;  }
+			     catch(ArithmeticException e)
+		          {
+				   System.out.println("Arithmetic Exception occurs");
+				  }  
+			  finally{
+			   System.out.println("Finally Block");
+			         } 
+			   System.out.println("End of Program");
+	}
+}
+
+   4)Exception propagation
+      class A{  
+  void m(){  
+    int data=50/0;  
+  }  
+  void n(){  
+    m();  
+  }  
+  void p(){  
+   try{  
+    n();  
+   }catch(Exception e){System.out.println("exception handled");}  
+  }  
+  public static void main(String args[]){  
+   A obj=new A();  
+   obj.p();  
+   System.out.println("normal flow");  
+  }  
+}  
+   3)---> multithreading
+   What is 
+   life cycle
+   ways to 
+  1)

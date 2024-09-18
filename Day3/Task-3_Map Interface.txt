@@ -1,0 +1,61 @@
+Task-3) Map Interface
+
+Program-1) HashMap Interface
+<------------------------------>
+import java.util.*;  
+class Main{  
+public static void main(String args[]){  
+Map<Integer,String> map1=new HashMap<>();
+map1.put(1,"ravi");
+map1.put(2,"ravi");
+map1.put(2,"rishi");
+map1.put(3,"raju");
+for(Map.Entry<Integer,String> m :map1.entrySet())
+{
+        System.out.println(m.getKey()+":"+m.getValue());
+}
+
+}
+}
+<------------------------------------->
+Program-2) LinkedHashMap Interface
+<------------------------------>
+	import java.util.*;  
+	class Main{  
+	public static void main(String args[]){  
+	Map<Integer,String> map1=new LinkedHashMap<>();
+	map1.put(3,"rajugaru");
+	map1.put(1,"ravi");
+	map1.put(2,"ravi");
+	map1.put(2,"rishi");
+	map1.put(3,"raju");
+	for(Map.Entry<Integer,String> m :map1.entrySet())
+	{
+        System.out.println(m.getKey()+":"+m.getValue());
+	}
+
+	}
+	}
+ 
+<------------------------------------->
+
+Program-3) TreeMap Interface
+<------------------------------>
+	import java.util.*;  
+	class Main{  
+	public static void main(String args[]){  
+	Map<Integer,String> map1=new TreeMap<>();
+	map1.put(3,"rajugaru");
+	map1.put(1,"ravi");
+	map1.put(2,"ravi");
+	map1.put(2,"rishi");
+	map1.put(3,"raju");
+	for(Map.Entry<Integer,String> m :map1.entrySet())
+	{
+        System.out.println(m.getKey()+":"+m.getValue());
+	}
+
+	}
+	}
+ 
+<------------------------------------->

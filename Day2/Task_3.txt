@@ -1,0 +1,85 @@
+Task-3:Exception Handling
+  Program-1:Exception handling using try catch block
+
+     class A {
+
+	public static void main(String[] args) {
+		try
+		{
+		int data=50/0; }
+		catch(ArithmeticException e)
+		{
+			System.out.println(e);
+		}
+		System.out.println("rest of the code");
+		}
+		
+	}
+Program-2:Exception handling with nested  try block along with catch block
+	    class A{
+
+	public static void main(String[] args) {
+		
+		   try{  
+			    int a[]=new int[5];  
+			   try{ a[5]=30/0;  }
+			     catch(ArithmeticException e)
+		          {
+				   System.out.println("Arithmetic Exception occurs");
+				  }  
+			    System.out.println(a[10]);
+			   }  
+			   catch(ArrayIndexOutOfBoundsException e)
+		          {
+				   System.out.println("ArrayIndexOutOfBounds Exception occurs");
+				  }  
+			   catch(Exception e)
+		          {
+				   System.out.println("Parent Exception occurs");
+				  }  		  
+			   System.out.println("rest of the code");  
+		}
+	}
+
+
+Program-3:Exception handling with  try,catch along with finally  block
+
+ class A{
+
+	public static void main(String[] args) {
+		
+			    int a[]=new int[5];  
+			   try{ a[5]=30/0;  }
+			     catch(ArithmeticException e)
+		          {
+				   System.out.println("Arithmetic Exception occurs");
+				  }  
+			  finally{
+			   System.out.println("Finally Block");
+			         } 
+			   System.out.println("End of Program");
+	}
+   }
+Program-4:Exception propagation
+    class A{  
+  void m(){  
+      System.out.println("inside Method m"); 
+    int data=50/0;  
+  }  
+  void n(){ 
+            System.out.println("inside Method n"); 
+             m();  
+  }  
+  void p(){  
+   try{  
+     System.out.println("inside Method p");    
+    n();  
+   }catch(Exception e){System.out.println("exception handled");}  
+  }  
+  public static void main(String args[]){  
+   A obj=new A();  
+   obj.p();  
+   System.out.println("normal flow");  
+  }  
+}  
+

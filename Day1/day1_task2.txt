@@ -1,0 +1,60 @@
+Task-2 ---> method overloading
+ program1 with same method name but different number of parameters
+
+public class Main
+{ 
+  private void add(int a,int b,int c)
+     {
+      System.out.println(a+b+c);
+     }
+  private void add(int a,int b)
+  { 
+      System.out.println("overloaded function");
+      System.out.println(a+b);
+  }
+	public static void main(String[] args) {
+		Main obj1=new Main();
+		obj1.add(1,1,1);
+		obj1.add(1,1);
+	}
+}
+
+ program2 with same method name and same number of parameters with different parameter data types
+
+ public class Main
+{ 
+  private void add(int a,int b)
+     {
+      System.out.println(a+b);
+     }
+  private void add(double a,double b)
+  { 
+      System.out.println("overloaded function");
+      System.out.println(a+b);
+  }
+	public static void main(String[] args) {
+		Main obj1=new Main();
+		obj1.add(1,1);
+		obj1.add(1.1,1.1);
+	}
+}
+ program3 with same method name and same number of parameters with same parameter data types but order is changed 
+
+
+public class Main
+{ 
+  private void add(int a,double b)
+     {
+      System.out.println(a+b);
+     }
+  private void add(double a,int b)
+  { 
+      System.out.println("overloaded function");
+      System.out.println(a+b);
+  }
+	public static void main(String[] args) {
+		Main obj1=new Main();
+		obj1.add(1,1.1);
+		obj1.add(1.1,1);
+	}
+}

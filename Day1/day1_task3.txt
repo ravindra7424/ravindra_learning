@@ -1,0 +1,65 @@
+Task-3 ---> demonstrating Inheritance and interface
+
+Program1 single inheritance 
+  class A{
+    protected void add(int a,int b)
+     {
+      System.out.println(a+b);
+     }
+    }
+ class B extends A
+  { 
+	public static void main(String[] args) {
+	    B b=new B();
+	    b.add(1,1);
+	
+	}
+  }
+progra2 multilevel inheritance
+    class A{
+    protected void add(int a,int b)
+     {
+      System.out.println(a+b);
+     }
+    }
+    class C extends A{
+    protected void add(int a,int b)
+     {
+           System.out.println("add method in class c");
+
+      System.out.println(a+b);
+     }
+    }
+  class B extends C
+ 	{ 
+	public static void main(String[] args) {
+	    B b=new B();
+	    b.add(1,1);
+	
+	 }
+       }
+program3 --> multiple inheritance using interfaces
+
+
+   interface A{
+     public void add(int a,int b);
+    }
+interface B{
+    public void add(int a,int b,int c);
+} 
+ class C implements B,A
+{ 
+    public void add(int a,int b){
+        
+        System.out.println(a+b);
+     }
+     public void add(int a,int b,int c){
+        System.out.print(a+b+c);
+    }
+	public static void main(String[] args) {
+	    C b=new C();
+	    b.add(1,1);
+	     b.add(1,1,1);
+	
+	}
+}
