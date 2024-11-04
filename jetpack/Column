@@ -1,0 +1,19 @@
+@Composable
+fun ColumnTexts() {
+  Column{
+    Text(
+        text = "Row1", modifier = Modifier
+            .background(Color(0xFFFF9800))
+            .padding(4.dp)
+    )
+    Text(
+        text = "Row2", modifier = Modifier
+            .background(Color(0xFFFFA726))
+            .padding(4.dp)
+    )
+    Text(
+        text = "Row3", modifier = Modifier
+            .background(Color(0xFFFFB74D))
+            .padding(4.dp)
+    )}
+}

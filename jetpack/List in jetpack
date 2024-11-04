@@ -1,0 +1,56 @@
+1)
+setContent {
+            Column {
+                for (i in 1..40){
+                    Text ( text="Item $i",
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp), textAlign = TextAlign.Center
+                        )
+
+                }
+            }
+         }
+
+2)With verical scrolling 
+  setContent {
+            val scrollState = rememberScrollState()
+            Column (modifier = Modifier.verticalScroll(scrollState)){
+                for (i in 1..40){
+                    Text ( text="Item $i",
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp), textAlign = TextAlign.Center,
+                        fontSize = 24.sp,
+                        fontWeight =FontWeight.Bold
+                        )
+
+                }
+            }
+         }
+
+
+3)LazyColumn
+  LazyColumn{
+                items(50)
+                {
+                    Text ( text="Item $it",
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp), textAlign = TextAlign.Center,
+                        fontSize = 24.sp,
+                        fontWeight =FontWeight.Bold
+                    )
+                }
+               
+            }
+
+4)
+setContent {
+            LazyColumn{
+                itemsIndexed(listOf("Apple","Banana","Cat","Dog"))
+                {Int,String->
+                    Text ( text="Item is ${String}",
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp), textAlign = TextAlign.Center,
+                        fontSize = 24.sp,
+                        fontWeight =FontWeight.Bold
+                    )
+                }
+
+            }
+         }
+

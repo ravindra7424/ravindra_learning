@@ -1,0 +1,15 @@
+  setContent {
+             var sizeState by remember {
+                 mutableStateOf(50.dp)
+             }
+         Box(modifier = Modifier
+             .size(sizeState)
+             .background(Color.Red),
+             contentAlignment= Alignment.Center){
+             Button(onClick = {
+                 sizeState+=10.dp
+             }) {
+                 Text("Incr Size")
+             }
+         }
+    }
